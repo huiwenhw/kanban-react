@@ -1,10 +1,9 @@
 import React from 'react';
 
-// Note controls what's rendered here
-// Renders passed task & connects deletion button 
-export default ({task, onDelete}) => (
-	<div> 
-		<span> {task} </span>
-		<button onClick={onDelete}> x </button>
+// <Note> <span> <button> </Note>
+// <span> && <button> are props in {children}
+export default ({children, ...props}) => (
+	<div {...props}>
+		{children}
 	</div>
 );
