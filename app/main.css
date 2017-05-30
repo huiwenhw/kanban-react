@@ -1,6 +1,58 @@
 body {
-  background-color: cornsilk;
-
-  font-family: sans-serif;
+	background-color: darkturquoise;
+	font-family: sans-serif;
 }
 
+button.add-note, button.delete {
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+.notes {
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 10px;
+	max-width: 300px;	
+}
+
+.note {
+	overflow: auto;
+	padding: 10px;
+	margin-bottom: 5px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.note:hover, .add-note:hover {
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+	transition: .2s;
+}
+
+.note .editable {
+	float: left;
+}
+
+.note .edit {
+	outline: none;
+	border: none;
+}
+
+.note .delete {
+	float: right;
+	padding: 3px;
+	background-color: #fdfdfd;
+	border: none;
+	visibility: hidden;
+}
+
+.note:hover .delete {
+	visibility: visible;
+}
+
+.delete:hover {
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+	transition: .2s;
+}
